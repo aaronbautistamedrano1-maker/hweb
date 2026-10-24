@@ -1,3 +1,10 @@
+<!--
+    DOCUMENTACIÓN SEMÁNTICA:
+    <article>: Representa una composición autocontenida (como una entrada de blog), que podría distribuirse independientemente.
+    <section>: Representa una sección genérica de un documento, agrupando contenido temáticamente relacionado (ej. Aperitivos).
+    <div>: Contenedor genérico de bloque sin significado semántico. Se usa para agrupar elementos y aplicar estilos (ej. agrupar ubicación y horario).
+    <span>: Contenedor genérico en línea sin significado semántico. Se usa para aplicar estilos a una porción específica de texto (ej. el precio).
+-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,8 +27,6 @@
         </nav>
     </header>
 
-</body>
-</html>
     <!-- Primer artículo: Menú de Otoño -->
     <article>
         <header>
@@ -46,7 +51,8 @@
                 <dd>Capas de trozos ligeros de carne de cangrejo, frijol y salsa de maíz, y nuestras tortillas de harina hechas a mano. <span class="precio">$159.00</span></dd>
             </dl>
         </section>
-                <!-- Sección de Platillos Principales -->
+
+        <!-- Sección de Platillos Principales -->
         <section id="platillosprincipales">
             <h3>Platillos principales</h3>
             <dl>
@@ -67,5 +73,19 @@
         </header>
         
         <p>Esta semana estamos <em>extremadamente</em> emocionados por presentar una nueva técnica de cocina llamada <dfn><i>sous vide</i></dfn>. Con la técnica <i>sous vide</i>, tú sumerges un recipiente (generalmente de plástico sellado al vacío) en un baño de agua que precisamente se adapta a la temperatura requerida para que la comida sea cocinada. En este programa, <cite>Cocina para Geeks</cite>, Jaime Potter describe la técnica como <q>poción mágica a temperatura ultra baja</q>.</p>
+        
         <p>La siguiente semana, prepararemos <cite>Salmon Sous Vide con Eneldo Holandés</cite>. Para asistir al programa, contáctanos antes del 30 de Noviembre.</p>
     </article>
+
+    <!-- Pie de página del documento -->
+    <footer>
+        <div id="acerca">
+            <p>Ubicación:<br> La esquina del sabor, Puebla, México.</p>
+            <p>Horario:<br> <time>Jueves a Sábado, desde 11:00 am hasta media noche</time>.</p>
+        </div>
+        <!-- small: Letra chiquita para notas legales. &copy; es el carácter especial de copyright -->
+        <p><small>2019 copyright &copy; Grupo Marter-Chef, Derechos reservados</small></p>
+    </footer>
+
+</body>
+</html>
