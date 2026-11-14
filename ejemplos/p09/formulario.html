@@ -11,6 +11,10 @@
         label { display: block; margin-top: 10px; margin-bottom: 5px; }
         input[type="text"], input[type="email"], input[type="tel"], textarea, select { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
         .inline-label { display: inline-block; margin-right: 15px; }
+        .button-group { text-align: center; margin-top: 20px; }
+        input[type="submit"], input[type="reset"] { padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; margin: 0 10px; }
+        input[type="submit"] { background-color: #4CAF50; color: white; }
+        input[type="reset"] { background-color: #f44336; color: white; }
     </style>
 </head>
 <body>
@@ -18,7 +22,6 @@
     <h1>Registro al Concurso &ldquo;Chidos mis Tenis&rdquo;</h1>
     <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#174;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puedes ser uno de los diez afortunados ganadores.</p>
 
-    <!-- Ojo: Agregamos enctype para que funcione la subida de archivos -->
     <form action="concurso.php" method="post" enctype="multipart/form-data">
         
         <fieldset>
@@ -65,7 +68,6 @@
             </select>
         </fieldset>
 
-        <!-- AQUÍ ESTÁ LO NUEVO DEL COMMIT 5 -->
         <fieldset>
             <legend>Detalles Adicionales (Controles HTML5)</legend>
             <label for="foto">Sube una foto de tus tenis viejos (opcional):</label>
@@ -81,9 +83,11 @@
             <input type="color" id="colorfavorito" name="colorfavorito" value="#ff0000">
         </fieldset>
 
-        <p>
-            <!-- Pendiente -->
-        </p>
+        <!-- NUEVO: Botones de acción -->
+        <div class="button-group">
+            <input type="submit" value="¡Pimp My Shoes! (Enviar)">
+            <input type="reset" value="Reiniciar">
+        </div>
 
     </form>
 </body>
