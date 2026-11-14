@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Concurso ¡Chidos mis Tenis!</title>
-    <style>
-        body { font-family: sans-serif; background-color: #f4f4f4; }
-        form { background-color: white; padding: 20px; max-width: 600px; margin: auto; border-radius: 8px; }
-        fieldset { margin-bottom: 15px; border: 1px solid #ccc; padding: 10px; }
-        legend { font-weight: bold; color: #333; }
-        label { display: block; margin-top: 10px; }
-        input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 5px; margin-top: 5px; }
+    <meta charset="utf-8">
+    <title>Registro al Concurso</title>
+    <style type="text/css">
+        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
+        form { background-color: white; padding: 20px; max-width: 600px; margin: auto; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        fieldset { margin-bottom: 15px; border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        legend { font-weight: bold; color: #333; padding: 0 5px; }
+        label { display: block; margin-top: 10px; margin-bottom: 5px; }
+        input[type="text"], input[type="email"], input[type="tel"], textarea { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
     </style>
 </head>
 <body>
 
-    <h1>Concurso ¡Chidos mis Tenis!</h1>
-    <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Forcefields? Cuéntanos por qué tus tenis tienen que irse y podrías ser uno de los diez afortunados ganadores.</p>
+    <h1>Registro al Concurso &ldquo;Chidos mis Tenis&rdquo;</h1>
+    <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#174;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puedes ser uno de los diez afortunados ganadores.</p>
 
     <form action="concurso.php" method="post">
         
         <fieldset>
-            <legend>Información de Participación</legend>
-            <!-- Aquí irán los campos de texto -->
+            <legend>Información del Participante</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Dirección de E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Número Telefónico:</label>
+            <input type="tel" id="telefono" name="telefono">
         </fieldset>
 
         <fieldset>
             <legend>Mis tenis son TAN viejos...</legend>
-            <!-- Aquí irá el textarea -->
+            <label for="razon">Mis tenis son tan feos porque...</label>
+            <textarea id="razon" name="razon" rows="4" maxlength="300" placeholder="Máximo 300 caracteres..." required></textarea>
         </fieldset>
 
         <fieldset>
             <legend>Diseña tus Forcefields personalizados</legend>
-            <!-- Aquí irán los radios y checkboxes -->
+            <!-- Pendiente -->
         </fieldset>
 
         <fieldset>
             <legend>Detalles Adicionales</legend>
-            <!-- Aquí irán los controles HTML5 -->
+            <!-- Pendiente -->
         </fieldset>
 
         <p>
-            <!-- Aquí irán los botones de enviar y reiniciar -->
+            <!-- Pendiente -->
         </p>
 
     </form>
-
 </body>
 </html>
