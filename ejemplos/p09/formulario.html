@@ -1,52 +1,49 @@
-<!DOCTYPE html >
-<html>
-  <head>
-    <meta charset="utf-8" >
-    <title>Registro al Concurso</title>
-    <style type="text/css">
-        ol, ul { 
-      list-style-type: none;
-        }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Concurso ¡Chidos mis Tenis!</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f4; }
+        form { background-color: white; padding: 20px; max-width: 600px; margin: auto; border-radius: 8px; }
+        fieldset { margin-bottom: 15px; border: 1px solid #ccc; padding: 10px; }
+        legend { font-weight: bold; color: #333; }
+        label { display: block; margin-top: 10px; }
+        input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 5px; margin-top: 5px; }
     </style>
-  </head>
+</head>
+<body>
 
-  <body>
+    <h1>Concurso ¡Chidos mis Tenis!</h1>
+    <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Forcefields? Cuéntanos por qué tus tenis tienen que irse y podrías ser uno de los diez afortunados ganadores.</p>
 
-    <h1>Registro al Concurso &ldquo;Chidos mis Tenis&rdquo;</h1>
+    <form action="concurso.php" method="post">
+        
+        <fieldset>
+            <legend>Información de Participación</legend>
+            <!-- Aquí irán los campos de texto -->
+        </fieldset>
 
-    <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#174;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puedes ser uno de los diez afortunados ganadores.</p>
+        <fieldset>
+            <legend>Mis tenis son TAN viejos...</legend>
+            <!-- Aquí irá el textarea -->
+        </fieldset>
 
-    <p>Información del Participante</p>
+        <fieldset>
+            <legend>Diseña tus Forcefields personalizados</legend>
+            <!-- Aquí irán los radios y checkboxes -->
+        </fieldset>
 
-    <ul>
-    <li>Nombre:</li>
-    <li>Dirección de E-mail:</li>
-    <li>Número Telefónico:</li>
-    <li>Mis tenis son tan feos porque...</li>
-    </ul>
+        <fieldset>
+            <legend>Detalles Adicionales</legend>
+            <!-- Aquí irán los controles HTML5 -->
+        </fieldset>
 
-    <h2>Diseña tus Mike personalizados:</h2>
+        <p>
+            <!-- Aquí irán los botones de enviar y reiniciar -->
+        </p>
 
-    <p>Diseño personalizado del Tenis</p>
+    </form>
 
-    <p>Color <em>(escoge uno)</em>:</p>
-      <ul>
-      <li>Rojo</li>
-      <li>Azul</li>
-      <li>Negro</li>
-      <li>Plateado</li>
-      </ul>
-
-    <p>Características <em>(escoge tantas como quieras)</em>:</p>
-      <ul>
-      <li>Cordones brillantes</li>
-      <li>Logo metálico</li>
-      <li>Suela luminosa</li>
-      <li>WiFi integrado</li>
-      </ul>
-
-    <p>Talla</p>
-    <p>Las medidas reflejan el estándar masculino:</p>
-
-  </body>
+</body>
 </html>
