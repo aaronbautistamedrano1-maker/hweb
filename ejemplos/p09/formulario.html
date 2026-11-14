@@ -27,15 +27,17 @@
         <fieldset>
             <legend>Información del Participante</legend>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <!-- NUEVO: autofocus y placeholder -->
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" autofocus required>
 
             <label for="email">Dirección de E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
 
             <label for="telefono">Número Telefónico:</label>
-            <input type="tel" id="telefono" name="telefono">
+            <input type="tel" id="telefono" name="telefono" placeholder="10 dígitos">
         </fieldset>
-
+        
+        <!-- El resto del formulario se queda igual... -->
         <fieldset>
             <legend>Mis tenis son TAN viejos...</legend>
             <label for="razon">Mis tenis son tan feos porque...</label>
@@ -83,7 +85,6 @@
             <input type="color" id="colorfavorito" name="colorfavorito" value="#ff0000">
         </fieldset>
 
-        <!-- NUEVO: Botones de acción -->
         <div class="button-group">
             <input type="submit" value="¡Pimp My Shoes! (Enviar)">
             <input type="reset" value="Reiniciar">
