@@ -4,30 +4,96 @@
     <meta charset="utf-8">
     <title>Registro al Concurso</title>
     <style type="text/css">
-        body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
-        form { background-color: white; padding: 20px; max-width: 600px; margin: auto; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        fieldset { margin-bottom: 15px; border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
-        legend { font-weight: bold; color: #333; padding: 0 5px; }
-        label { display: block; margin-top: 10px; margin-bottom: 5px; }
-        input[type="text"], input[type="email"], input[type="tel"], textarea, select { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .inline-label { display: inline-block; margin-right: 15px; }
-        .button-group { text-align: center; margin-top: 20px; }
-        input[type="submit"], input[type="reset"] { padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; margin: 0 10px; }
-        input[type="submit"] { background-color: #4CAF50; color: white; }
-        input[type="reset"] { background-color: #f44336; color: white; }
+        /* 1. Fuente más moderna y fondo con gradiente */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 40px 20px; 
+            margin: 0;
+        }
+        
+        /* 2. Formulario con sombra más elegante */
+        form { 
+            background-color: white; 
+            padding: 30px; 
+            max-width: 600px; 
+            margin: auto; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+        }
+        
+        /* 3. Títulos y textos */
+        h1 { text-align: center; color: #333; margin-bottom: 10px; }
+        p { text-align: center; color: #666; line-height: 1.5; }
+        
+        /* 4. Cajas de agrupación (fieldset) */
+        fieldset { 
+            margin-bottom: 20px; 
+            border: 2px solid #e0e0e0; 
+            padding: 20px; 
+            border-radius: 8px; 
+            background-color: #fafafa;
+        }
+        legend { 
+            font-weight: bold; 
+            color: #667eea; 
+            padding: 0 10px; 
+            font-size: 1.1em;
+        }
+        
+        /* 5. Etiquetas y Campos de texto */
+        label { display: block; margin-top: 15px; margin-bottom: 8px; color: #444; font-weight: 500; }
+        
+        input[type="text"], input[type="email"], input[type="tel"], textarea, select { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-family: inherit;
+            transition: all 0.3s ease; /* Animación al hacer clic */
+        }
+        
+        /* Efecto cuando el usuario hace clic en un campo */
+        input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus, select:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+        }
+
+        /* 6. Botones mejorados con efecto hover */
+        .button-group { text-align: center; margin-top: 30px; }
+        input[type="submit"], input[type="reset"] { 
+            padding: 12px 25px; 
+            font-size: 16px; 
+            font-weight: bold;
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            margin: 0 10px; 
+            transition: all 0.3s ease;
+        }
+        input[type="submit"] { background-color: #667eea; color: white; }
+        input[type="submit"]:hover { background-color: #5a6fd6; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); }
+        
+        input[type="reset"] { background-color: #ff4757; color: white; }
+        input[type="reset"]:hover { background-color: #ff6b81; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4); }
+
+        /* Separación para los radios y checkboxes */
+        .inline-label { display: inline-block; margin-right: 15px; font-weight: normal; }
     </style>
 </head>
 <body>
 
     <h1>Registro al Concurso &ldquo;Chidos mis Tenis&rdquo;</h1>
-    <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#174;?<br><br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puedes ser uno de los diez afortunados ganadores.</p>
+    <p>¿Quieres cambiar tus viejos tenis por un par personalizado de Tenis Mike&#174;?<br>Justifica el por qué tus tenis se <em>tienen que</em> ir y tú puedes ser uno de los diez afortunados ganadores.</p>
 
     <form action="concurso.php" method="post" enctype="multipart/form-data">
         
         <fieldset>
             <legend>Información del Participante</legend>
             <label for="nombre">Nombre:</label>
-            <!-- NUEVO: autofocus y placeholder -->
             <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" autofocus required>
 
             <label for="email">Dirección de E-mail:</label>
@@ -36,8 +102,7 @@
             <label for="telefono">Número Telefónico:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="10 dígitos">
         </fieldset>
-        
-        <!-- El resto del formulario se queda igual... -->
+
         <fieldset>
             <legend>Mis tenis son TAN viejos...</legend>
             <label for="razon">Mis tenis son tan feos porque...</label>
@@ -46,19 +111,20 @@
 
         <fieldset>
             <legend>Diseña tus Mike personalizados</legend>
-            <p>Color <em>(escoge uno)</em>:</p>
+            
+            <p style="text-align: left; margin-bottom: 5px;">Color <em>(escoge uno)</em>:</p>
             <label class="inline-label"><input type="radio" name="color" value="rojo" checked> Rojo</label>
             <label class="inline-label"><input type="radio" name="color" value="azul"> Azul</label>
             <label class="inline-label"><input type="radio" name="color" value="negro"> Negro</label>
             <label class="inline-label"><input type="radio" name="color" value="plateado"> Plateado</label>
 
-            <p>Características <em>(escoge tantas como quieras)</em>:</p>
+            <p style="text-align: left; margin-top: 15px; margin-bottom: 5px;">Características <em>(escoge tantas como quieras)</em>:</p>
             <label class="inline-label"><input type="checkbox" name="caracteristicas[]" value="cordones"> Cordones brillantes</label>
             <label class="inline-label"><input type="checkbox" name="caracteristicas[]" value="logo"> Logo metálico</label>
             <label class="inline-label"><input type="checkbox" name="caracteristicas[]" value="suela"> Suela luminosa</label>
             <label class="inline-label"><input type="checkbox" name="caracteristicas[]" value="wifi"> WiFi integrado</label>
 
-            <label for="talla">Talla (Las medidas reflejan el estándar masculino):</label>
+            <label for="talla" style="margin-top: 20px;">Talla (Las medidas reflejan el estándar masculino):</label>
             <select id="talla" name="talla">
                 <option value="">-- Selecciona una talla --</option>
                 <option value="25">25</option>
@@ -73,7 +139,7 @@
         <fieldset>
             <legend>Detalles Adicionales (Controles HTML5)</legend>
             <label for="foto">Sube una foto de tus tenis viejos (opcional):</label>
-            <input type="file" id="foto" name="foto">
+            <input type="file" id="foto" name="foto" style="border: none; padding: 0;">
 
             <label for="fecha">¿Cuándo compraste tus tenis?</label>
             <input type="date" id="fecha" name="fecha">
@@ -82,7 +148,7 @@
             <input type="number" id="anos" name="anos" min="1" max="20" value="5">
 
             <label for="colorfavorito">Color favorito en general:</label>
-            <input type="color" id="colorfavorito" name="colorfavorito" value="#ff0000">
+            <input type="color" id="colorfavorito" name="colorfavorito" value="#ff0000" style="width: 50px; height: 40px; padding: 2px;">
         </fieldset>
 
         <div class="button-group">
